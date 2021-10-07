@@ -7,7 +7,7 @@ const app = express();
 
 const Posts = require('./Posts.js');
 
-mongoose.connect('mongodb+srv://root:VN5vCa5AXY8xHuAf@cluster0.gfhnd.mongodb.net/dankicode?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true }).then(() => {
+mongoose.connect('mongodb+srv://root:password@cluster0.gfhnd.mongodb.net/dankicode?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true }).then(() => {
     console.log("Conectado com sucesso")
 }).catch(() => {
     console.log(err.message);
