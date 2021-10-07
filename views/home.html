@@ -1,0 +1,74 @@
+<body>
+    <%- include('partials/header.html') %>
+
+        <section class="noticia-destaque">
+            <div class="center">
+                <div class="img-destaque">
+                    <div class="overlay-destaque"></div>
+                    <div class="title-destaque-descricao">
+                        <a href="<%- posts[0].slug %>">
+                            <h2>
+                                <%- posts[0].titulo %>
+                            </h2>
+                        </a>
+                        <p>
+                            <%- posts[0].descricaoCurta %>...
+                        </p>
+                    </div> <!-- title destaque -->
+                    <img src="<%- posts[0].img %>" alt="">
+                </div> <!-- image destaque -->
+            </div> <!-- center -->
+        </section> <!-- noticia destaque -->
+
+        <section class="outras-noticias">
+            <div class="title-outras-noticia">
+                <h2>Últimas noticias</h2>
+                <br><br>
+                <div class="center">
+                    <div class="ultimas">
+                        <% for(let post of posts){ %>
+
+                            <div class="box-ultima-single">
+                                <img src="<%- post.img %>" alt="">
+                                <h3>
+                                    <%- post.categoria %>
+                                </h3>
+                                <h2>
+                                    <%- post.titulo %>
+                                </h2>
+                                <p>
+                                    <%- post.descricaoCurta %>
+                                </p>
+                                <a href="<%- post.slug %>">Saiba mais</a>
+                            </div> <!-- box ultima single -->
+                            <% } %>
+                    </div> <!-- ultimas -->
+                    <div class="mais-lidas">
+                        <h3>Mais lidas</h3>
+                        <div class="mais-lidas-noticias">
+
+                            <% for(let post of postsTop){ %>
+                                <div class="mais-lida-noticia-single">
+                                    <img src="<%- post.img %>" alt="">
+                                    <div class="texto-mais-lida-single">
+                                        <h4>
+                                            <%- post.categoria %>
+                                        </h4>
+                                        <p>
+                                            <%- post.descricaoCurta %>
+                                        </p>
+                                        <p><%- post.views %></p>
+                                        <a href="<%- post.slug %>">Saiba mais</a>
+                                    </div> <!-- texto mais lida single -->
+                                </div> <!-- mais lidas noticias -->
+                            <%} %>
+
+
+                        </div> <!-- mais lidas -->
+                    </div> <!-- center -->
+                </div> <!-- title outras noticias -->
+        </section> <!-- outras noticias -->
+        <%- include('partials/footer.html') %>
+</body>
+
+</html>
