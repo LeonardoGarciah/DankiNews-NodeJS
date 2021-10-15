@@ -1,19 +1,19 @@
-
-
 <body>
     <%- include('partials/header.html') %>
 
         <section class="noticia">
             <div class="center">
                 <div class="noticia-single">
-                    <h2><%- noticia.titulo%></h2>
+                    <h2>
+                        <%- noticia.titulo%>
+                    </h2>
                     <div class="autor-nome">
                         <span>Por <%- noticia.autor%></span>
                     </div>
                     <div>
                         <img style="max-width: 100%" src="<%- noticia.img%>" alt="">
                     </div>
-                    <%- noticia.conteudo%>    
+                    <%- noticia.conteudo%>
                 </div>
                 <div class="mais-lidas">
                     <h3>Mais lidas</h3>
@@ -31,12 +31,16 @@
                                         <%- post.descricaoCurta %>
                                     </p>
                                     <a href="<%- post.slug %>">Saiba mais</a>
-                                </div> <!-- texto mais lida single -->
-                            </div> <!-- mais lidas noticias -->
-                        <%} %>
+                                </div>
+                                <!-- texto mais lida single -->
+                            </div>
+                            <!-- mais lidas noticias -->
+                            <%} %>
 
-                    </div> <!-- mais lidas noticias -->
-                </div> <!-- mais lidas -->
+                    </div>
+                    <!-- mais lidas noticias -->
+                </div>
+                <!-- mais lidas -->
             </div>
         </section>
 
